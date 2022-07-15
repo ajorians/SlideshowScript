@@ -14,7 +14,7 @@ for pid in $(pidof -x pqiv); do
     fi
 done
 
-pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box /mnt/sync/pizero2w/* 
+pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box /mnt/sync/pizero2w/* & 
 
 #qiv --display :0 --slide --delay 5 --fullscreen --scale_down --no_statusbar /mnt/photos/*
 
