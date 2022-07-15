@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TIME=$(date +%H%M)
-if [ $TIME -eq 2331 ]; then
+if [ $TIME -eq 0300 ]; then
    echo "Killing pqiv to start fresh"
    killall pqiv
    sleep 10
@@ -14,7 +14,7 @@ for pid in $(pidof -x pqiv); do
     fi
 done
 
-pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box /mnt/photos/* &
+pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box /mnt/sync/pizero2w/* 
 
 #qiv --display :0 --slide --delay 5 --fullscreen --scale_down --no_statusbar /mnt/photos/*
 
