@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MEDIAPATH=/mnt/photos/*
+
 TIME=$(date +%H%M)
 if [ $TIME -eq 0300 ]; then
    echo "Killing pqiv to start fresh"
@@ -14,10 +16,10 @@ for pid in $(pidof -x pqiv); do
     fi
 done
 
-pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box /mnt/sync/pizero2w/* & 
+pqiv --slideshow-interval=10 --slideshow --display=:0 --fullscreen --hide-info-box $MEDIAPATH & 
 
-#qiv --display :0 --slide --delay 5 --fullscreen --scale_down --no_statusbar /mnt/photos/*
+#qiv --display :0 --slide --delay 5 --fullscreen --scale_down --no_statusbar $MEDIAPATH 
 
-#viewnior --slideshow --fullscreen --display=:0 /mnt/photos/*
+#viewnior --slideshow --fullscreen --display=:0 $MEDIAPATH 
 
 
